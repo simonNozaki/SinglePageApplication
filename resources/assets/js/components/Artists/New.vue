@@ -1,8 +1,12 @@
 <template>
 <div>
     <div>
-        <input type = "text" v-model = "registration">
-        <p>Registration {{ registration }} </p>
+        <input type = "text" v-model = "input">
+        <input type = "text" v-model = "text">
+        <ul>
+            <li>Input: {{ input }} </li>
+            <li>Text: {{ text }} </li>
+        </ul>
     </div>
 </div>
 </template>
@@ -11,7 +15,8 @@
 export default {
   data(){
     return{
-      registration: ""
+      input: "input default",
+      text: "text default"
     }
   }
 }

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MusicDatabase</title>
+    <title>underConstruction</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}"></script>
-    <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+    
     <script>
       window.Laravel = {
         csrfToken: "{{ csrf_token() }}"
@@ -18,6 +18,7 @@
     <div id = "vueApp" class ="top">
       <navbar></navbar>
       <div class = "container">
+        <h3>underConstruction</h3>
         <router-view></router-view>
       </div>
     </div>
