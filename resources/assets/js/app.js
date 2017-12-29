@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import axios from 'axios'
+import VeeValidate from 'vee-validate'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -13,6 +15,7 @@ window.Vue = require('vue');
 **/
 
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
