@@ -52767,6 +52767,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -52860,7 +52862,13 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v(_vm._s(artist.name))]
+                [
+                  _vm._v(
+                    "\n                   " +
+                      _vm._s(artist.name) +
+                      "\n                 "
+                  )
+                ]
               ),
               _vm._v(" "),
               _c("span", { staticClass: "badge badge-primary badge-pill" }, [

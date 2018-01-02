@@ -8,7 +8,9 @@
         <h3>Bands</h3>
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center" v-for="artist in filterArtists">
-                 <router-link v-bind:to="{ name : 'Show', params : { artist_id: artist.artist_id }}">{{ artist.name }}</router-link>
+                 <router-link v-bind:to="{ name : 'Show', params : { artist_id: artist.artist_id }}">
+                   {{ artist.name }}
+                 </router-link>
             <span class="badge badge-primary badge-pill">{{ artist.area }}</span>
             <span class="badge badge-primary badge-pill">{{ artist.category }}</span>
             </li>
