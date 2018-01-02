@@ -29,9 +29,9 @@ Route::group(['middleware' => 'api'], function(){
     return $artists;
   });
 
-  Route::get('artists/show/{id}', function($id){
+  Route::get('artists/show/{artist_id}', function($artist_id){
     $artist = DB::table('artist_master')
-          ->where('artist_id', '=', $id)
+          ->where('artist_id', '=', $artist_id)
           ->get();
     return $artist;
   });
@@ -41,16 +41,23 @@ Route::group(['middleware' => 'api'], function(){
     $category = $request->input('category');
     $area = $request->input('area');
     $office = $request->input('office');
-    $artist = DB::table('ARTIST_SET.artist_master')
+    $this->validate($request, [
+      'name' => 'required|unique:artist_master',
+      'category' => 'required',
+      'area' => 'required',
+      'office' => 'required'
+    ]);
+    DB::table('ARTIST_SET.artist_master')
           ->insertGetId([ 'name' => $name, 'category' => $category, 'area' => $area, 'office' => $office ]);
   });
 
   Route::post('artists/search', function(Request $request){
     $category = $request->input('category');
     $this->validate($request, [ 'category' => $category ]);
-    $record = DB::table('artist_master')
+    $records = DB::table('ARTIST_SET.artist_master')
               ->where('category', 'like', "%{$category}%")
               ->get();
+    return [$records, $category];
   });
 
 });

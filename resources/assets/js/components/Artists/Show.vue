@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> {{ artist.name }} </h1>
+    <h1> id: {{ artist.artist_id }} </h1>
     <ul>
       <li> 地域: {{ artist.area }} </li>
       <li> ジャンル: {{ artist.category }} </li>
@@ -19,8 +19,8 @@
     },
     methods: {
       getRecord(){
-        this.$http.get('/api/artists/show/{id}')
-        .then(response => {this.artist = response.data} )
+        this.$http.get('/api/artists/show/{artist_id}')
+        .then(res => {this.artist = res.data} )
       }
     }
   }

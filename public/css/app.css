@@ -8,16 +8,6 @@
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-li, ul{
-  list-style: none;
-}
-
-@media screen and (max-width: 500px){
-  body{
-    width: 500px;
-  }
-}
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8359,3 +8349,4 @@ button.close {
     display: none !important;
   }
 }
+

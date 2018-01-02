@@ -32,7 +32,7 @@ const router = new VueRouter({
     {path: '/index', component: require('./components/Artists/Index.vue') },
     {path: '/about', component: require('./components/About.vue') },
     {path: '/new', component: require('./components/Artists/New.vue') },
-    {path: '/artists/show/:id', component: require('./components/Artists/Show.vue') }
+    {name: 'Show', path: '/show/:artist_id', component: require('./components/Artists/Show.vue') }
   ],
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {

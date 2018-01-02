@@ -15,10 +15,10 @@
       window.Laravel = {};
     </script>
   </head>
-  <body>
-    <div id = "vueApp" class ="top">
+  <body style="background-color: #f39c12;">
+    <div id = "vueApp" class ="container">
       <navbar></navbar>
-      <div class = "container">
+      <div>
         <router-view></router-view>
       </div>
     </div>
