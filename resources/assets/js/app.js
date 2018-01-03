@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import VueRouter from 'vue-router'
 import axios from 'axios'
 import VeeValidate from 'vee-validate'
@@ -16,6 +18,7 @@ window.Vue = require('vue');
 
 Vue.use(VueRouter);
 Vue.use(VeeValidate);
+Vue.use(ElementUI);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

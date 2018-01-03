@@ -41,12 +41,6 @@ Route::group(['middleware' => 'api'], function(){
     $category = $request->input('category');
     $area = $request->input('area');
     $office = $request->input('office');
-    $this->validate($request, [
-      'name' => 'required|unique:artist_master',
-      'category' => 'required',
-      'area' => 'required',
-      'office' => 'required'
-    ]);
     DB::table('ARTIST_SET.artist_master')
           ->insertGetId([ 'name' => $name, 'category' => $category, 'area' => $area, 'office' => $office ]);
   });
