@@ -1,28 +1,28 @@
 <template>
 <div>
-    <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
-    <span v-show="errors.has('category')" class="help is-danger">{{ errors.first('category') }}</span>
-    <span v-show="errors.has('area')" class="help is-danger">{{ errors.first('area') }}</span>
-    <span v-show="errors.has('office')" class="help is-danger">{{ errors.first('office') }}</span>
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
-    <input type="text" v-model = "name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" data-vv-rules="required" :class="{'input': true, 'is-danger': errors.has('name') }">
+    <input type="text" v-model = "name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" data-vv-rules.initial="required" :class="{'input': true, 'is-danger': errors.has('name') }">
+    <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Category</label>
     <input type="text" v-model = "category" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="POP PUNK, POST HARDCORE..." data-vv-rules="required" :class="{'input': true, 'is-danger': errors.has('category') }">
     <small id="emailHelp" class="form-text text-muted">Enter Bands' Category</small>
+    <span v-show="errors.has('category')" class="help is-danger">{{ errors.first('category') }}</span>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Area</label>
     <input type="text" v-model = "area" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="東京、大阪..." data-vv-rules="required" :class="{'input': true, 'is-danger': errors.has('area') }">
     <small id="emailHelp" class="form-text text-muted">Enter Bands' Area</small>
+    <span v-show="errors.has('area')" class="help is-danger">{{ errors.first('area') }}</span>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Office</label>
     <input type="text" v-model = "office" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="TRUST RECORDS, THE NINTH APOLLO..." data-vv-rules="required" :class="{'input': true, 'is-danger': errors.has('office') }">
     <small id="emailHelp" class="form-text text-muted">Enter Bands' Management or Office.</small>
+    <span v-show="errors.has('office')" class="help is-danger">{{ errors.first('office') }}</span>
   </div>
   <button v-on:click = "postArtist" class="btn btn-secondary">Register</button>
 </form>
@@ -65,7 +65,6 @@ export default {
         console.log(res.data.area);
       })
       .catch(error => console.log(error.response));
-
     }
   }
 }

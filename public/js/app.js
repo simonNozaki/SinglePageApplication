@@ -96858,92 +96858,102 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    {
-      staticClass: "navbar navbar-expand-lg navbar-dark bg-dark",
-      staticStyle: { "background-color": "#2c3e50" }
-    },
-    [
-      _c("router-link", { staticClass: "navbar-brand", attrs: { to: "/" } }, [
-        _vm._v("Bands Database")
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "collapse navbar-collapse",
-          attrs: { id: "navbarSupportedContent" }
-        },
-        [
-          _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-            _c(
-              "li",
-              { staticClass: "nav-item dropdown" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "nav-link dropdown-toggle",
-                    attrs: {
-                      to: "#",
-                      id: "navbarDropdown",
-                      role: "button",
-                      "data-toggle": "dropdown",
-                      "aria-haspopup": "true",
-                      "aria-expanded": "false"
-                    }
-                  },
-                  [_vm._v("\n          Menu\n        ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "dropdown-menu",
-                    attrs: { "aria-labelledby": "navbarDropdown" }
-                  },
-                  [
-                    _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { to: "/new" }
-                          },
-                          [_vm._v("Register")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { to: "/about" }
-                          },
-                          [_vm._v("About")]
-                        )
-                      ],
-                      1
-                    )
-                  ]
-                )
-              ],
-              1
-            )
-          ])
-        ]
-      )
-    ],
-    1
-  )
+  return _c("div", [
+    _c(
+      "nav",
+      {
+        staticClass: "navbar navbar-expand-lg navbar-dark bg-dark",
+        staticStyle: { "background-color": "#2c3e50" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "collapse navbar-collapse",
+            attrs: { id: "navbarSupportedContent" }
+          },
+          [
+            _c("ul", { staticClass: "navbar-nav mr-auto" }, [
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c("router-link", { attrs: { to: "/new" } }, [
+                    _vm._v("Register Bands")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item dropdown" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link dropdown-toggle",
+                      attrs: {
+                        to: "#",
+                        id: "navbarDropdown",
+                        role: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "true",
+                        "aria-expanded": "false"
+                      }
+                    },
+                    [_vm._v("\n          Menu\n        ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "navbarDropdown" }
+                    },
+                    [
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { to: "/new" }
+                            },
+                            [_vm._v("Register")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "dropdown-divider" }),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { to: "/about" }
+                            },
+                            [_vm._v("About")]
+                          )
+                        ],
+                        1
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ])
+          ]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -97511,70 +97521,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.errors.has("name"),
-            expression: "errors.has('name')"
-          }
-        ],
-        staticClass: "help is-danger"
-      },
-      [_vm._v(_vm._s(_vm.errors.first("name")))]
-    ),
-    _vm._v(" "),
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.errors.has("category"),
-            expression: "errors.has('category')"
-          }
-        ],
-        staticClass: "help is-danger"
-      },
-      [_vm._v(_vm._s(_vm.errors.first("category")))]
-    ),
-    _vm._v(" "),
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.errors.has("area"),
-            expression: "errors.has('area')"
-          }
-        ],
-        staticClass: "help is-danger"
-      },
-      [_vm._v(_vm._s(_vm.errors.first("area")))]
-    ),
-    _vm._v(" "),
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.errors.has("office"),
-            expression: "errors.has('office')"
-          }
-        ],
-        staticClass: "help is-danger"
-      },
-      [_vm._v(_vm._s(_vm.errors.first("office")))]
-    ),
-    _vm._v(" "),
     _c("form", [
       _c("div", { staticClass: "form-group" }, [
         _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("Name")]),
@@ -97594,7 +97540,7 @@ var render = function() {
             type: "text",
             id: "exampleInputEmail1",
             "aria-describedby": "emailHelp",
-            "data-vv-rules": "required"
+            "data-vv-rules.initial": "required"
           },
           domProps: { value: _vm.name },
           on: {
@@ -97605,7 +97551,23 @@ var render = function() {
               _vm.name = $event.target.value
             }
           }
-        })
+        }),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.errors.has("name"),
+                expression: "errors.has('name')"
+              }
+            ],
+            staticClass: "help is-danger"
+          },
+          [_vm._v(_vm._s(_vm.errors.first("name")))]
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-group" }, [
@@ -97646,6 +97608,22 @@ var render = function() {
           "small",
           { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
           [_vm._v("Enter Bands' Category")]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.errors.has("category"),
+                expression: "errors.has('category')"
+              }
+            ],
+            staticClass: "help is-danger"
+          },
+          [_vm._v(_vm._s(_vm.errors.first("category")))]
         )
       ]),
       _vm._v(" "),
@@ -97685,6 +97663,22 @@ var render = function() {
           "small",
           { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
           [_vm._v("Enter Bands' Area")]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.errors.has("area"),
+                expression: "errors.has('area')"
+              }
+            ],
+            staticClass: "help is-danger"
+          },
+          [_vm._v(_vm._s(_vm.errors.first("area")))]
         )
       ]),
       _vm._v(" "),
@@ -97726,6 +97720,22 @@ var render = function() {
           "small",
           { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
           [_vm._v("Enter Bands' Management or Office.")]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.errors.has("office"),
+                expression: "errors.has('office')"
+              }
+            ],
+            staticClass: "help is-danger"
+          },
+          [_vm._v(_vm._s(_vm.errors.first("office")))]
         )
       ]),
       _vm._v(" "),
